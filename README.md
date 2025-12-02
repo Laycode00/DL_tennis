@@ -69,7 +69,9 @@ tennis-DL_tennis/
 
 
 ### 5. Training & Evaluation
+```bash
 python -m src.train
+```
 
 Load data/sliced_data.csv
 
