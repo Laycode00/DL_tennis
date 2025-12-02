@@ -1,0 +1,25 @@
+# configs/exp_01.yaml
+
+experiment_name: "exp_01_lstm_gru_impact_detection"
+
+seed: 42
+
+data:
+  file_path: "data/sliced_data.csv"
+  time_steps: 50
+  features: 18
+
+training:
+  batch_size: 256
+  num_epochs: 50
+  patience: 3
+  learning_rate: 0.001
+  test_size: 0.2
+
+model:
+  hidden_size: 256
+  num_layers: 2
+  dropout: 0.2
+  models_to_run:
+    - "LSTM"
+    - "GRU"
