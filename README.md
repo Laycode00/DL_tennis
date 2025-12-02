@@ -49,6 +49,7 @@ binary column
 
 ### 4. Project Structure
 
+```bash
 tennis-DL_tennis/
 ├─ README.md
 ├─ requirements.txt
@@ -64,7 +65,7 @@ tennis-DL_tennis/
 │  └─ README.md       # description of sliced_data.csv (no raw data uploaded)
 │
 └─ results/           # (optional) logs, figures, checkpoints (git-ignored)
-
+```
 
 
 ### 5. Training & Evaluation
