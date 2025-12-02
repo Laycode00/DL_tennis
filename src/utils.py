@@ -42,11 +42,17 @@ class EarlyStopping:
             self.counter = 0
 
 
-def train_and_evaluate(model, train_loader, test_loader,
-                       num_epochs=50, patience=3):
+def train_and_evaluate(
+    model,
+    train_loader,
+    test_loader,
+    num_epochs: int = 50,
+    patience: int = 3,
+    learning_rate: float = 0.001,
+):
     model = model.to(device)
     criterion = nn.BCELoss()
-    optimizer = optim.Adam(model.parameters(), lr=0.001)
+    optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
     early_stopping = EarlyStopping(patience=patience, verbose=True)
 
@@ -84,6 +90,7 @@ def train_and_evaluate(model, train_loader, test_loader,
         if early_stopping.early_stop:
             print("Early stopping")
             break
+
 
     model.load_state_dict(early_stopping.best_model_wts)
 
