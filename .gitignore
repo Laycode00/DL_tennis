@@ -1,0 +1,50 @@
+# -------------------------
+# Python basics
+# -------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Editor/IDE settings (optional to ignore)
+.vscode/
+.idea/
+
+# -------------------------
+# Project-specific
+# -------------------------
+
+# Do not commit raw data files.
+# The expected data layout should be documented in README.md or data/README.md.
+data/
+# If you want to track a documentation file such as data/README.md,
+# you can add it manually with: git add data/README.md
+
+# Experimental outputs: logs, model checkpoints, etc.
+results/
+logs/
+checkpoints/
+runs/
+
+# Figures and temporary images (optional)
+# If you want to keep final figures under version control,
+# consider placing them in a separate directory (e.g., docs/ or paper_figures/)
+# and adjusting these rules accordingly.
+figures/
+*.png
+*.jpg
+*.jpeg
+
+# OS-specific files
+.DS_Store
+Thumbs.db
